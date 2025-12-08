@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phở Việt Nam - Tinh Hoa Ẩm Thực Đường Phố Châu Á</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* ==================================== */
+/* === STYLE CHO TRANG NỘI DUNG MÓN ĂN (PHOVN.HTML) === */
+/* ==================================== */
+
+.food-detail-content {
+    max-width: 1000px; /* Giữ nội dung rộng hơn một chút */
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Khu vực banner chính */
+.food-hero {
+    position: relative;
+    height: 350px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Lớp phủ tối cho tiêu đề */
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0;
+}
+
+/* Đoạn tóm tắt */
+.summary-text {
+    font-size: 1.3em;
+    text-align: center;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+/* Tiêu đề mục chi tiết */
+.food-section .section-heading {
+    text-align: left;
+    color: #006400; /* Màu xanh lá cây đậm tượng trưng cho rau thơm */
+    border-left: 5px solid #ffcc00; /* Vàng đặc trưng */
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Cột chia đôi cho công thức */
+.two-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.two-columns > div {
+    flex: 1;
+}
+
+.two-columns h3 {
+    color: #cc0000; /* Màu đỏ cho tiêu đề phụ */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.two-columns ul, .two-columns ol {
+    padding-left: 20px;
+}
+
+.two-columns li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Blockquote văn hóa */
+.culture-quote {
+    background: #f0fff0; /* Nền xanh nhạt */
+    border-left: 5px solid #006400;
+    padding: 15px 20px;
+    margin: 20px 0 30px 0;
+    font-style: italic;
+    color: #444;
+}
+
+/* Nút quay lại */
+.back-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #cc0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-back:hover {
+    background: #990000;
+}
+</style>
+<body>
+
+    <header class="main-header">
+        <div class="left-banner">
+            <a href="https://shopee.vn/Ga%CC%82%CC%81u-Bo%CC%82ng-Con-Vi%CC%A3t-Nh%E1%BB%93i-B%C3%B4ng-M%E1%BB%81m-M%E1%BB%8Bn-G%E1%BA%A5u-B%C3%B4ng-G%E1%BB%91i-%C3%B4m-%C4%90%E1%BB%93-Ch%C6%A1i-D%E1%BB%85-Th%C6%B0%C6%A1ng-H%C3%ACnh-Con-Ng%E1%BB%97ng-G%E1%BA%A5u-B%C3%B4ng-Cao-C%E1%BA%A5p-M%E1%BA%ABu-M%E1%BB%9Bi-i.1301297418.28467489440?extraParams=%7B%22display_model_id%22%3A217972995368%2C%22model_selection_logic%22%3A3%7D&xptdk=87a747d3-ee3b-4fd1-9b2b-48cf9f63ae36" target="_blank">
+                <img src="shopee.png" alt="Quảng cáo" class="ad-banner">
+            </a>
+        </div>
+        
+        <div class="header-center">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo Trang Chủ" class="logo">
+            </a>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="asia.html">Châu Á</a></li>
+                    <li><a href="europe.html">Châu Âu</a></li>
+                    <li><a href="america.html">Châu Mỹ</a></li>
+                    <li><a href="lienhe.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right-banner">
+            <a href="https://www.lazada.vn/products/pdp-i2756708-s3347924.html?scm=1007.17760.398138.0&pvid=6e1b4b46-f197-4fd1-932f-9ecec42e76b7&search=flashsale&spm=a2o4n.homepage.FlashSale.d_2756708" target="_blank">
+                <img src="lazada.PNG" alt="Quảng cáo" class="ad-banner">
+            </a>
+        </div>
+    </header>
+
+    <main class="content food-detail-content">
+        
+        <div class="food-hero">
+            <img src="taco.jpg" alt="Bát Phở Việt Nam" class="hero-image">
+            <h1 class="hero-title">mx TACOS</h1>
+        </div>
+
+ <p class="summary-text">
+    Taco là một món ăn truyền thống của Mexico, bao gồm một lớp vỏ bánh ngô (tortilla) mềm hoặc giòn, gấp lại và được nhồi nhân. Taco nổi tiếng bởi sự đa dạng và tùy biến cao, từ nhân thịt bò, thịt heo, hải sản, đến các loại rau củ, kết hợp cùng các loại sốt và topping tươi mát.
+</p>
+
+<hr>
+
+<section class="food-section origin">
+    <h2 class="section-heading">📜 Nguồn Gốc Lịch Sử</h2>
+    <p>
+        Nguồn gốc của Taco rất cổ xưa, có từ thời kỳ trước khi người châu Âu đến châu Mỹ. Người Aztec đã sử dụng bánh ngô mềm để làm 'thìa' ăn thức ăn, và đây được coi là hình thức sơ khai của Taco. Cái tên "Taco" hiện đại được cho là xuất hiện vào thế kỷ 18, liên quan đến những người thợ mỏ bạc ở Mexico, có lẽ vì món ăn này giống như những miếng thuốc nổ nhỏ mà họ dùng để khai thác quặng.
+    </p>
+</section>
+
+<hr>
+
+<section class="food-section ingredients">
+    <h2 class="section-heading">🔪 Công Thức & Cách Làm</h2>
+    <div class="two-columns">
+        <div class="column-left">
+            <h3>Các Thành Phần Chính:</h3>
+            <ul>
+                <li>Vỏ bánh (Tortilla): Bánh ngô (corn) hoặc bánh mì bột mì (wheat) mềm hoặc nướng giòn.</li>
+                <li>Nhân: Thịt bò băm (Ground Beef), thịt heo nướng (Al Pastor), thịt gà xé, hoặc cá chiên (Fish Tacos).</li>
+                <li>Topping cơ bản: Hành tây thái hạt lựu, ngò rí (cilantro).</li>
+                <li>Nước sốt: Salsa (Salsa Verde hoặc Salsa Roja), Guacamole (bơ nghiền).</li>
+            </ul>
+        </div>
+        <div class="column-right">
+            <h3>Quy Trình Hoàn Thiện:</h3>
+            <ol>
+                <li>Chuẩn bị Tortilla: Bánh ngô thường được làm nóng trên chảo hoặc hấp nhẹ để mềm dẻo.</li>
+                <li>Nấu Nhân: Nhân thịt được nấu chín và nêm gia vị đậm đà (thường là ướp ớt và cumin).</li>
+                <li>Tạo Taco: Đặt một lượng nhân vừa phải lên bánh tortilla, sau đó thêm các loại topping.</li>
+                <li>Thưởng Thức: Taco thường được ăn ngay bằng tay, kèm theo lát chanh để vắt và dùng với các loại sốt đa dạng.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="food-section meaning">
+    <h2 class="section-heading">❤️ Ý Nghĩa Văn Hóa</h2>
+    <blockquote class="culture-quote">
+        "Taco là canvas ẩm thực của Mexico. Mỗi góc phố, mỗi gia đình lại có một công thức riêng, kể một câu chuyện về vùng đất và nguyên liệu địa phương."
+    </blockquote>
+    <p>
+        Taco là một phần không thể thiếu trong ẩm thực và đời sống xã hội Mexico. Nó đại diện cho sự đa dạng, sáng tạo và tinh thần cộng đồng. Từ những xe bán Taco đường phố (Taquería) đến các nhà hàng sang trọng, món ăn này mang ý nghĩa của sự bình dị, tiện lợi và niềm tự hào dân tộc, đã trở thành một hiện tượng ẩm thực toàn cầu.
+    </p>
+</section>
+        
+        <div class="back-link">
+            <a href="america.html" class="btn-back">← Quay lại trang Châu Mỹ</a>
+        </div>
+
+    </main>
+    
+</body>
+</html>
