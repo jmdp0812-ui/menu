@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Châu Á - Thế Giới Ẩm Thực Đường Phố</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* ==================================== */
+/* === STYLE CHO TRANG ASIA.HTML/ EUROPE.HTML === */
+/* ==================================== */
+
+/* Tiêu đề trang */
+.page-title {
+    text-align: center;
+    color: #cc0000; /* Màu đỏ nổi bật cho Châu Á */
+    padding: 20px 0;
+    font-size: 2.5em;
+    border-bottom: 3px solid #ffcc00; /* Đường kẻ vàng dưới tiêu đề */
+    margin-bottom: 20px;
+}
+
+/* Đoạn giới thiệu */
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Đường phân cách */
+.section-divider {
+    border: none;
+    border-top: 1px dashed #ccc;
+    margin: 40px 0;
+}
+
+/* Tiêu đề các mục */
+.section-heading {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* === Lưới hiển thị các món ăn (Dish Grid) === */
+.dish-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.dish-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Chiều rộng cố định cho card món ăn */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dish-card h3 {
+    color: #cc0000;
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    padding: 0 15px;
+}
+
+.dish-card p {
+    color: #666;
+    padding: 0 15px 15px;
+    font-size: 1em;
+}
+/* Thêm đoạn này vào style.css */
+.dish-card-link {
+    text-decoration: none; /* Bỏ gạch chân mặc định của liên kết */
+    color: inherit; /* Giữ màu chữ như cũ */
+}
+
+/* Quan trọng: Thiết lập thẻ liên kết bọc ngoài thành block để nó bao phủ toàn bộ card */
+.dish-card-link {
+    display: block;
+    width: 300px; /* Phải khớp với width của .dish-card đã định nghĩa trước đó */
+}
+
+/* Áp dụng hiệu ứng hover lên thẻ liên kết bọc ngoài */
+.dish-card-link:hover .dish-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Tag quốc gia */
+.country-tag {
+    display: inline-block;
+    background: #ffcc00;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Placeholder ảnh món ăn (giống placeholder chung, nhưng có thể điều chỉnh) */
+.dish-card .card-image-placeholder {
+    height: 200px; /* Chiều cao cố định cho ảnh món ăn */
+    margin-bottom: 0;
+}
+
+/* Mục liệt kê quốc gia */
+.country-focus ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.country-focus li {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #cc0000;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.country-focus li strong {
+    color: #cc0000;
+}
+
+/* Menu active */
+.main-menu a.active {
+    color: #cc0000; /* Màu đỏ nổi bật cho trang đang được chọn */
+    border-bottom: 2px solid #cc0000;
+}
+</style>
+<body>
+
+    <header class="main-header">
+        <div class="left-banner">
+            <a href="https://shopee.vn/Ga%CC%82%CC%81u-Bo%CC%82ng-Con-Vi%CC%A3t-Nh%E1%BB%93i-B%C3%B4ng-M%E1%BB%81m-M%E1%BB%8Bn-G%E1%BA%A5u-B%C3%B4ng-G%E1%BB%91i-%C3%B4m-%C4%90%E1%BB%93-Ch%C6%A1i-D%E1%BB%85-Th%C6%B0%C6%A1ng-H%C3%ACnh-Con-Ng%E1%BB%97ng-G%E1%BA%A5u-B%C3%B4ng-Cao-C%E1%BA%A5p-M%E1%BA%ABu-M%E1%BB%9Bi-i.1301297418.28467489440?extraParams=%7B%22display_model_id%22%3A217972995368%2C%22model_selection_logic%22%3A3%7D&xptdk=87a747d3-ee3b-4fd1-9b2b-48cf9f63ae36" target="_blank">
+                <img src="shopee.png" alt="Quảng cáo" class="ad-banner">
+            </a>
+        </div>
+        
+        <div class="header-center">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo Trang Chủ" class="logo">
+            </a>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="asia.html" class="active">Châu Á</a></li>
+                    <li><a href="europe.html">Châu Âu</a></li>
+                    <li><a href="america.html">Châu Mỹ</a></li>
+                    <li><a href="lienhe.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="right-banner">
+            <a href="https://www.lazada.vn/products/pdp-i2756708-s3347924.html?scm=1007.17760.398138.0&pvid=6e1b4b46-f197-4fd1-932f-9ecec42e76b7&search=flashsale&spm=a2o4n.homepage.FlashSale.d_2756708" target="_blank">
+                <img src="lazada.PNG" alt="Quảng cáo" class="ad-banner">
+            </a>
+        </div>
+    </header>
+
+    <main class="content asia-content">
+        <h1 class="page-title">🌶️ Ẩm Thực Đường Phố Châu Á: Thế Giới Của Hương Vị</h1>
+        <p class="intro-text">
+            Châu Á là cái nôi của ẩm thực đường phố, nơi mỗi góc phố, con hẻm đều ẩn chứa một câu chuyện hương vị độc đáo. Từ sự cay nồng của Thái Lan, vị đậm đà của Việt Nam, đến sự tinh tế của Nhật Bản, hãy cùng khám phá các món ăn làm nên tên tuổi của ẩm thực đường phố Á Châu.
+        </p>
+
+        <hr class="section-divider">
+
+        <section class="featured-dishes">
+            <h2 class="section-heading">🌟 Những Ngôi Sao Đường Phố</h2>
+            <div class="dish-grid">
+                
+                <a href="phovn.html" class="dish-card-link">
+                    <div class="dish-card">
+                        <div class="card-image-placeholder">
+                            <img src="pho.jpg" alt="Phở Việt Nam">
+                        </div>
+                        <h3>Phở (Việt Nam)</h3>
+                        <p>Sự kết hợp hoàn hảo của nước dùng xương hầm, bánh phở mềm và các loại rau thơm tươi mát.</p>
+                        <span class="country-tag">🇻🇳 Việt Nam</span>
+                    </div>
+                </a>
+
+                <div class="dish-card">
+                    <div class="card-image-placeholder">
+                         <img src="padthai.jpg" alt="Pad Thái">
+                    </div>
+                    <h3>Pad Thái (Thái Lan)</h3>
+                    <p>Món mì xào trứ danh với vị chua, cay, mặn, ngọt hài hòa, là biểu tượng của Bangkok.</p>
+                    <span class="country-tag">🇹🇭 Thái Lan</span>
+                </div>
+
+                <div class="dish-card">
+                    <div class="card-image-placeholder">
+                         <img src="torayaki.jpg" alt="Takoyaki">
+                    </div>
+                    <h3>Takoyaki (Nhật Bản)</h3>
+                    <p>Những viên bánh bạch tuộc nướng tròn nóng hổi, phủ sốt và vảy cá bào thơm lừng.</p>
+                    <span class="country-tag">🇯🇵 Nhật Bản</span>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+    </main>
+    
+    </body>
+</html>

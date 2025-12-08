@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Màu nền chung: Xanh lá pastel nhạt */
+    background-color: #e9f5e9; /* Pastel light green */
+    color: #333;
+}
+
+/* --- HEADER & NAVIGATION --- */
+/* --- HEADER & NAVIGATION (CẬP NHẬT) --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Canh trên cùng */
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-banner, .right-banner {
+    /* Đảm bảo chiếm đúng 15% độ rộng theo yêu cầu */
+    width: 15%; 
+    text-align: center;
+    padding-top: 5px; /* Thêm padding trên để banner không quá sát mép */
+}
+
+.ad-banner {
+    width: 100%;
+    /* Giữ nguyên chiều cao tối đa, bạn có thể điều chỉnh */
+    max-height: 150px; 
+    object-fit: cover;
+    display: block;
+}
+
+.header-center {
+    /* Đảm bảo chiếm đúng 70% độ rộng còn lại */
+    width: 70%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Các phần CSS còn lại (logo, menu, card) giữ nguyên như đã cung cấp */
+
+.logo-link {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.logo {
+    height: 60px; /* Kích thước logo */
+    width: auto;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.main-menu a:hover {
+    color: #1a7d3c; /* Màu xanh đậm hơn khi hover */
+}
+
+/* --- MAIN CONTENT --- */
+.content {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1a7d3c;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.card-container {
+    display: flex;
+    /* Đảm bảo 3 card vừa màn hình và cách nhau */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu màn hình nhỏ */
+    gap: 30px;
+}
+
+.food-card {
+    /* Tính toán để 3 card vừa màn hình (khoảng 30% mỗi card) */
+    width: 30%; 
+    min-width: 300px; /* Giới hạn nhỏ nhất cho card trên màn hình lớn */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.food-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card-image-placeholder img {
+    width: 100%; /* Ảnh chiếm hết chiều rộng của placeholder */
+    height: 100%; /* Ảnh chiếm hết chiều cao */
+    object-fit: cover; /* Cắt ảnh nếu cần để lấp đầy không gian mà không làm méo */
+    display: block;
+    border-radius: 8px 8px 0 0; /* Bo tròn góc trên của ảnh nếu card có bo góc */
+}
+
+/* Định nghĩa kích thước cố định cho placeholder để ảnh có chỗ đứng */
+.card-image-placeholder {
+    width: 100%;
+    /* Điều chỉnh chiều cao này để ảnh có kích thước mong muốn */
+    height: 180px; 
+    overflow: hidden; /* Giấu phần ảnh thừa ra ngoài */
+    margin-bottom: 10px;
+}
+
+/* Màu nền cho từng card theo yêu cầu */
+.card-asia {
+    /* Màu vàng pastel */
+    background-color: #fffacd; 
+}
+
+.card-europe {
+    /* Màu hồng pastel */
+    background-color: #f7dcdb; 
+}
+
+.card-america {
+    /* Màu bạc pastel */
+    background-color: #e6e6fa; /* Màu lavender nhạt, gần với bạc/xám pastel */
+    /* Có thể dùng: #e0e0e0; nếu muốn màu bạc xám hơn */
+}
+
+.btn-explore {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1a7d3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: #156330;
+}
+
+/* --- Responsive (Tùy chọn) --- */
+@media (max-width: 1024px) {
+    .food-card {
+        width: 45%; /* Trên tablet, 2 card trên 1 hàng */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left-banner, .right-banner {
+        width: 100%;
+        margin-bottom: 10px;
+        order: -1; /* Đưa banner lên trên cùng hoặc dưới cùng */
+    }
+
+    .header-center {
+        width: 100%;
+    }
+
+    .food-card {
+        width: 90%; /* Trên điện thoại, 1 card trên 1 hàng */
+        min-width: unset;
+    }
+}
